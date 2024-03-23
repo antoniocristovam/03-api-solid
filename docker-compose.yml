@@ -9,3 +9,6 @@ services:
       - POSTGRESQL_USERNAME=docker
       - POSTGRESQL_PASSWORD=docker
       - POSTGRESQL_DATABASE=apisolid
+
+# docker-compose up -d
+# docker-compose stop
