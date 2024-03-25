@@ -15,7 +15,6 @@ export class RegisterUseCase {
     const password_hash = await hash(password, 6);
 
     const userWithEmail = await this.usersRepository.findByEmail(email);
-
     if (userWithEmail) {
       throw new UserAlreadyExistsError();
     }
