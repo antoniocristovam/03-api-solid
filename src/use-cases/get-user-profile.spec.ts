@@ -29,18 +29,10 @@ describe("Get User Profile Use Case", () => {
   });
 
   it("should not be able to get user profile with wrong id ", async () => {
-    expect(() =>
+    await expect(() =>
       sut.execute({
         userId: "non-existing-id",
       })
     ).rejects.toBeInstanceOf(ResourceNotFoundError);
-  });
-
-  it("should not be able to authentication wrong password ", async () => {
-    await userRepository.create({
-      name: "John Doe",
-      email: "johndoe@example.com",
-      password_hash: await hash("123456", 6),
-    });
   });
 });
