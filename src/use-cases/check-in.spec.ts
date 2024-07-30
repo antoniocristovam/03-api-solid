@@ -1,11 +1,6 @@
 import { expect, describe, it, beforeEach, vi, afterEach } from "vitest";
 import { CheckInUseCase } from "@/use-cases/check-in";
-import { InMemoryGymsRepository } from "@/repositories/in-memory/in-memory-gyms-repository";
-import { Decimal } from "@prisma/client/runtime/library";
-import { InMemoryCheckInsRepository } from "@/repositories/in-memory/in-memory-check-in-repository";
 
-let checkInsRepository: InMemoryCheckInsRepository;
-let gymsRepository: InMemoryGymsRepository;
 let sut: CheckInUseCase;
 
 describe("Check-in Use Case", () => {
